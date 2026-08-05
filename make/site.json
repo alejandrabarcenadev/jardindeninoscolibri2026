@@ -1,0 +1,10 @@
+{
+  "description": "This user-friendly website showcases Jardín de Niños Colibrí, providing parents with essential information about its quality education, methodologies, and extracurricular activities.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
