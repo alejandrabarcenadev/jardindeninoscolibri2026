@@ -245,7 +245,7 @@ function Hero() {
 
         <div className="flex flex-col items-center gap-6 lg:-ml-8">
           <img src={logoHero} alt="Logo Jardín de Niños Colibrí"
-            style={{ width: "clamp(240px,35vw,380px)", objectFit: "contain" }}
+            style={{ width: "clamp(240px,38vw,440px)", objectFit: "contain" }}
           />
         </div>
       </div>
