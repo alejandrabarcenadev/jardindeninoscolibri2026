@@ -3,6 +3,11 @@ import logoHeader from "@/imports/logo_horizonta._jadin.deninos.colibri.png"
 import logoHero from "@/imports/logo_oficial.jpg"
 import imgPlaceholder from "@/imports/placeholder-1.png"
 import quienesSomos from "@/imports/quienes-somos.jpeg"
+import acompanamientoEstructurado from "@/imports/acompanamiento-estructurado.jpeg"
+import aprenderJugandoExplorando from "@/imports/aprender-jugando-explorando.jpeg"
+import aprendizajeActivo from "@/imports/aprendizaje-activo.jpeg"
+import metodologiaEmmi from "@/imports/metodologia-emmi.jpeg"
+import platicaFamiliar from "@/imports/platica-familiar.jpeg"
 
 const C = {
   navy:    "#171B5A",
@@ -149,14 +154,14 @@ function SectionHeader({ title, subtitle, color = C.navy, accent }: { title: str
 
 // ── Shared image placeholder ──────────────────────────────────────────────────
 // ✏️  Replace src="" with the real image path to swap in a photo
-function ImgPlaceholder({ src = "", alt = "", height = 180, radius = 14 }: { src?: string; alt?: string; height?: number; radius?: number }) {
+function ImgPlaceholder({ src = "", alt = "", height = 180, radius = 14, objectPosition = "center center" }: { src?: string; alt?: string; height?: number; radius?: number; objectPosition?: string }) {
   const effectiveSrc = src || imgPlaceholder
   const [failed, setFailed] = useState(false)
   return (
     <div style={{ width: "100%", height, borderRadius: radius, overflow: "hidden", position: "relative", background: "#f0f3ff", flexShrink: 0 }}>
       {!failed ? (
         <img src={effectiveSrc} alt={alt} onError={() => setFailed(true)}
-          style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition, display: "block" }} />
       ) : (
         <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, border: `2px dashed ${C.navy}20`, borderRadius: radius, background: `linear-gradient(135deg,${C.navy}08,${C.purple}0a)` }}>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={C.navy} strokeWidth="1.8" strokeLinecap="round" opacity="0.45">
@@ -861,10 +866,10 @@ function Galeria() {
 // ── ESCUELA PARA PADRES ───────────────────────────────────────────────────────
 function EscuelaPadres() {
   const items = [
-    { IconEl: Icon.users,     title: "Talleres para familias", desc: "Sesiones prácticas sobre comunicación, límites, desarrollo emocional y acompañamiento en el aprendizaje." },
-    { IconEl: Icon.chat,      title: "Charlas de orientación", desc: "Espacios de reflexión con especialistas en educación infantil y crianza positiva." },
-    { IconEl: Icon.heart,     title: "Comunidad de apoyo",     desc: "Un espacio de confianza donde madres y padres comparten experiencias y se apoyan mutuamente." },
-    { IconEl: Icon.link,      title: "Vínculo escuela-familia",desc: "Fortalecemos la comunicación continua para que el proceso educativo sea una experiencia compartida." },
+    { IconEl: Icon.users, title: "Talleres para familias", desc: "Sesiones prácticas sobre comunicación, límites, desarrollo emocional y acompañamiento en el aprendizaje.", img: acompanamientoEstructurado, objectPosition: "center 38%" },
+    { IconEl: Icon.chat, title: "Charlas de orientación", desc: "Espacios de reflexión con especialistas en educación infantil y crianza positiva.", img: aprenderJugandoExplorando, objectPosition: "center 48%" },
+    { IconEl: Icon.heart, title: "Comunidad de apoyo", desc: "Un espacio de confianza donde madres y padres comparten experiencias y se apoyan mutuamente.", img: aprendizajeActivo, objectPosition: "center 42%" },
+    { IconEl: Icon.link, title: "Vínculo escuela-familia", desc: "Fortalecemos la comunicación continua para que el proceso educativo sea una experiencia compartida.", img: metodologiaEmmi, objectPosition: "center 42%" },
   ]
   return (
     <section style={{ background: "linear-gradient(135deg,#fff8f0 0%,#fff3fa 100%)", position: "relative" }} className="py-20">
@@ -881,8 +886,7 @@ function EscuelaPadres() {
           <div className="grid sm:grid-cols-2 gap-5">
             {items.map(it => (
               <div key={it.title} style={{ background: C.white, borderRadius: 20, overflow: "hidden", boxShadow: "0 4px 20px rgba(183,23,106,0.08)", borderLeft: `4px solid ${C.magenta}`, display: "flex", flexDirection: "column" }}>
-                {/* ✏️ Image slot — set src="/images/padres-XX.jpg" when photo is ready */}
-                <ImgPlaceholder src="" alt={it.title} height={120} radius={0} />
+                <ImgPlaceholder src={it.img} alt={it.title} height={150} radius={0} objectPosition={it.objectPosition} />
                 <div style={{ padding: "1.25rem 1.25rem" }}>
                   <div style={{ marginBottom: 8, width: 36, height: 36, borderRadius: 10, background: C.magenta + "18", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <it.IconEl size={18} color={C.magenta} />
@@ -1032,8 +1036,7 @@ function EMMLarge() {
             </ul>
           </div>
           <div style={{ background: "#fff8f4", borderRadius: 24, overflow: "hidden" }}>
-            {/* ✏️ Image slot — set src="/images/familias.jpg" when photo is ready */}
-            <ImgPlaceholder src="" alt="Familias del Jardín de Niños Colibrí" height={160} radius={0} />
+            <ImgPlaceholder src={platicaFamiliar} alt="Plática con familias del Jardín de Niños Colibrí" height={220} radius={0} objectPosition="center 62%" />
             <div style={{ padding: "1.75rem 2rem" }}>
               <h3 style={{ fontFamily: "'Fredoka One',cursive", color: C.orange, fontSize: "1.5rem", marginBottom: 16, display: "flex", alignItems: "center", gap: 10 }}>
                 <Icon.users size={22} color={C.orange} /> Beneficios para las familias
