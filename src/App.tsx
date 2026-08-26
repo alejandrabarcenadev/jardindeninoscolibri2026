@@ -2,6 +2,7 @@ import { useState } from "react"
 import logoHeader from "@/imports/logo_horizonta._jadin.deninos.colibri.png"
 import logoHero from "@/imports/logo_oficial.jpg"
 import imgPlaceholder from "@/imports/placeholder-1.png"
+import quienesSomos from "@/imports/quienes-somos.jpeg"
 
 const C = {
   navy:    "#171B5A",
@@ -245,7 +246,7 @@ function Hero() {
 
         <div className="flex flex-col items-center gap-6 lg:-ml-8">
           <img src={logoHero} alt="Logo Jardín de Niños Colibrí"
-            style={{ width: "clamp(240px,38vw,440px)", objectFit: "contain" }}
+            style={{ width: "clamp(280px,42vw,520px)", objectFit: "contain" }}
           />
         </div>
       </div>
@@ -259,7 +260,16 @@ function QuienesSomos() {
     <section id="nosotros" style={{ background: "#f7fdf9", position: "relative", overflow: "hidden" }} className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
         <div style={{ borderRadius: 28, overflow: "hidden", boxShadow: "0 16px 48px rgba(23,27,90,0.13)", height: 440, background: "#c8e6c9" }}>
-          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=880&fit=crop&auto=format" alt="Maestra acompañando a niños en actividad de aprendizaje" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          <img
+            src={quienesSomos}
+            alt="Fachada del Jardín de Niños Colibrí"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center center"
+            }}
+          />
         </div>
         <div>
           <Chip color={C.green}>Quiénes somos</Chip>
