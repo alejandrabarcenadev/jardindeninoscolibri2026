@@ -8,6 +8,12 @@ import aprenderJugandoExplorando from "@/imports/aprender-jugando-explorando.jpe
 import aprendizajeActivo from "@/imports/aprendizaje-activo.jpeg"
 import metodologiaEmmi from "@/imports/metodologia-emmi.jpeg"
 import platicaFamiliar from "@/imports/platica-familiar.jpeg"
+import ecologia from "@/imports/ecologia.jpeg"
+import materialesExplorar from "@/imports/materiales-explorar.jpeg"
+import musicaEstudiantina from "@/imports/musica-estudiantina.jpeg"
+import natacion from "@/imports/natacion.jpeg"
+import pinturaCreatividad from "@/imports/pintura-creatividad.jpeg"
+import tecnologiaProposito from "@/imports/tecnologia-proposito.jpg"
 
 const C = {
   navy:    "#171B5A",
@@ -266,7 +272,7 @@ function QuienesSomos() {
   return (
     <section id="nosotros" style={{ background: "#f7fdf9", position: "relative", overflow: "hidden" }} className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
-        <div style={{ borderRadius: 28, overflow: "hidden", boxShadow: "0 16px 48px rgba(23,27,90,0.13)", height: 440, background: "#c8e6c9" }}>
+        <div style={{ borderRadius: 28, overflow: "hidden", boxShadow: "0 16px 48px rgba(23,27,90,0.13)", height: "clamp(300px,65vw,440px)", background: "#c8e6c9" }}>
           <img
             src={quienesSomos}
             alt="Fachada del Jardín de Niños Colibrí"
@@ -363,8 +369,8 @@ function Metodologia() {
               ))}
             </div>
           </div>
-          <div style={{ borderRadius: 28, overflow: "hidden", boxShadow: "0 16px 48px rgba(23,27,90,0.13)", height: 420, background: "#fff9c4" }}>
-            <img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=800&h=840&fit=crop&auto=format" alt="Niños en actividad de aprendizaje activo con materiales didácticos" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          <div style={{ borderRadius: 28, overflow: "hidden", boxShadow: "0 16px 48px rgba(23,27,90,0.13)", height: "clamp(280px,55vw,420px)", background: "#fff9c4" }}>
+            <img src={metodologiaEmmi} alt="Docente aplicando la metodología EMMI con sus alumnos" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center" }} />
           </div>
         </div>
       </div>
@@ -411,10 +417,10 @@ function AreasAprendizaje() {
 // ── EXTRACURRICULARES ─────────────────────────────────────────────────────────
 function Extracurriculares() {
   const activities = [
-    { IconEl: Icon.music,    title: "Música y estudiantina", desc: "Fomentamos el amor por la música a través de cuerdas, ritmo y expresión artística colectiva.", color: C.magenta, img: "https://images.unsplash.com/photo-1465821185615-20b3c2fbf41b?w=600&h=400&fit=crop&auto=format" },
-    { IconEl: Icon.droplets, title: "Natación",             desc: "Desarrollamos habilidades acuáticas, confianza y disciplina en un ambiente seguro y estimulante.", color: C.navy, img: "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=600&h=400&fit=crop&auto=format" },
-    { IconEl: Icon.brush,    title: "Talleres de pintura y creatividad", desc: "Exploramos la imaginación a través de la pintura, el modelado, las manualidades y el arte libre.", color: C.orange, img: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&h=400&fit=crop&auto=format" },
-    { IconEl: Icon.leaf,     title: "Ecología",             desc: "Despertamos la conciencia ambiental y el amor por la naturaleza desde los primeros años.", color: C.green, img: "https://images.unsplash.com/photo-1471107191679-f26174d2d41e?w=600&h=400&fit=crop&auto=format" },
+    { IconEl: Icon.music, title: "Música y estudiantina", desc: "Fomentamos el amor por la música a través de cuerdas, ritmo y expresión artística colectiva.", color: C.magenta, img: musicaEstudiantina },
+    { IconEl: Icon.droplets, title: "Natación", desc: "Desarrollamos habilidades acuáticas, confianza y disciplina en un ambiente seguro y estimulante.", color: C.navy, img: natacion },
+    { IconEl: Icon.brush, title: "Talleres de pintura y creatividad", desc: "Exploramos la imaginación a través de la pintura, el modelado, las manualidades y el arte libre.", color: C.orange, img: pinturaCreatividad },
+    { IconEl: Icon.leaf, title: "Ecología", desc: "Despertamos la conciencia ambiental y el amor por la naturaleza desde los primeros años.", color: C.green, img: ecologia },
   ]
   return (
     <section id="extracurriculares" style={{ background: C.white, position: "relative" }} className="py-20">
@@ -669,13 +675,14 @@ const GALLERY_ITEMS = [
   { id: "02", src: aprenderJugandoExplorando, alt: "Niñas y niños aprendiendo, jugando y explorando" },
   { id: "03", src: aprendizajeActivo, alt: "Actividad de aprendizaje activo" },
   { id: "04", src: metodologiaEmmi, alt: "Metodología EMMI en el aula" },
-  { id: "05", src: "/images/gallery-05.jpg", alt: "Actividad de natación" },
-  { id: "06", src: "/images/gallery-06.jpg", alt: "Clase de música — estudiantina" },
+  { id: "05", src: natacion, alt: "Actividad de natación" },
+  { id: "06", src: musicaEstudiantina, alt: "Clase de música y estudiantina" },
   { id: "07", src: "/images/gallery-07.jpg", alt: "Lectura y lenguaje" },
   { id: "08", src: "/images/gallery-08.jpg", alt: "Ceremonia y convivencia escolar" },
   { id: "09", src: "/images/gallery-09.jpg", alt: "Clase de inglés" },
-  { id: "11", src: "/images/gallery-11.jpg", alt: "Actividad de ecología" },
-  { id: "12", src: "/images/gallery-12.jpg", alt: "Computación y tecnología" },
+  { id: "10", src: pinturaCreatividad, alt: "Taller de pintura y creatividad" },
+  { id: "11", src: ecologia, alt: "Actividad de ecología" },
+  { id: "12", src: tecnologiaProposito, alt: "Tecnología con propósito educativo" },
   { id: "13", src: "/images/gallery-13.jpg", alt: "Pensamiento matemático" },
   { id: "14", src: "/images/gallery-14.jpg", alt: "Escuela para padres" },
   { id: "15", src: "/images/gallery-15.jpg", alt: "Instalaciones del jardín" },
@@ -939,10 +946,10 @@ function VideoInstitucional() {
 function EMMLarge() {
   // ✏️  Fill in src="/images/emmi-XX.jpg" for each card when photos are ready
   const valueCards = [
-    { IconEl: Icon.handshake, title: "Aprendizaje activo",                      color: C.red,    imgSrc: "", imgAlt: "Niños aprendiendo activamente", desc: "Cada actividad invita a las niñas y los niños a participar, descubrir y aprender haciendo, en lugar de recibir la información de manera pasiva." },
-    { IconEl: Icon.book,      title: "Materiales que se pueden tocar y explorar", color: C.orange, imgSrc: "", imgAlt: "Materiales manipulativos en el aula", desc: "Libros, juegos y materiales manipulativos permiten comprender ideas abstractas mediante experiencias concretas, especialmente en lenguaje y matemáticas." },
-    { IconEl: Icon.monitor,   title: "Tecnología con propósito educativo",        color: C.purple, imgSrc: "", imgAlt: "Tecnología educativa en el jardín", desc: "Videos, juegos y cuestionarios interactivos complementan el trabajo en el aula y mantienen el aprendizaje cercano, visual y estimulante." },
-    { IconEl: Icon.award,     title: "Acompañamiento docente estructurado",       color: C.navy,   imgSrc: "", imgAlt: "Docente guiando a sus alumnos", desc: "Las docentes cuentan con planeaciones, guías semanales y recursos paso a paso que les permiten organizar las experiencias de aprendizaje y dar continuidad al desarrollo de cada grupo." },
+    { IconEl: Icon.handshake, title: "Aprendizaje activo", color: C.red, imgSrc: aprendizajeActivo, imgAlt: "Niños aprendiendo activamente", desc: "Cada actividad invita a las niñas y los niños a participar, descubrir y aprender haciendo, en lugar de recibir la información de manera pasiva." },
+    { IconEl: Icon.book, title: "Materiales que se pueden tocar y explorar", color: C.orange, imgSrc: materialesExplorar, imgAlt: "Materiales manipulativos en el aula", desc: "Libros, juegos y materiales manipulativos permiten comprender ideas abstractas mediante experiencias concretas, especialmente en lenguaje y matemáticas." },
+    { IconEl: Icon.monitor, title: "Tecnología con propósito educativo", color: C.purple, imgSrc: tecnologiaProposito, imgAlt: "Tecnología educativa en el jardín", desc: "Videos, juegos y cuestionarios interactivos complementan el trabajo en el aula y mantienen el aprendizaje cercano, visual y estimulante." },
+    { IconEl: Icon.award, title: "Acompañamiento docente estructurado", color: C.navy, imgSrc: acompanamientoEstructurado, imgAlt: "Docente guiando a sus alumnos", desc: "Las docentes cuentan con planeaciones, guías semanales y recursos paso a paso que les permiten organizar las experiencias de aprendizaje y dar continuidad al desarrollo de cada grupo." },
   ]
 
   const steps = [
@@ -981,8 +988,8 @@ function EMMLarge() {
                 EMMI integra metodologías internacionales con los contenidos de la Nueva Escuela Mexicana, permitiendo fortalecer áreas esenciales como pensamiento matemático, lenguaje, lectoescritura e inglés mediante experiencias adecuadas para cada etapa del desarrollo infantil.
               </p>
             </div>
-            <div style={{ borderRadius: 24, overflow: "hidden", height: 360, background: "#1a2080" }}>
-              <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=800&h=720&fit=crop&auto=format" alt="Niños explorando materiales educativos en el aula" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.88 }} />
+            <div style={{ borderRadius: 24, overflow: "hidden", height: "clamp(260px,55vw,360px)", background: "#1a2080" }}>
+              <img src={aprenderJugandoExplorando} alt="Niñas y niños aprendiendo, jugando y explorando" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center", opacity: 0.92 }} />
             </div>
           </div>
         </div>
