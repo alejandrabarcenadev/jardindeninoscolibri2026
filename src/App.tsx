@@ -172,8 +172,8 @@ function ImgPlaceholder({ src = "", alt = "", height = 180, radius = 14 }: { src
 // ── HEADER ────────────────────────────────────────────────────────────────────
 function Header() {
   const [open, setOpen] = useState(false)
-  const links = ["Inicio","Nosotros","EMMI","Galería","Blog","Horarios","Contacto"]
-  const linkColors = [C.navy, C.green, C.orange, C.magenta, C.purple, C.red, C.navy]
+  const links = ["Inicio","Nosotros","EMMI","Galería","Horarios","Contacto"]
+  const linkColors = [C.navy, C.green, C.orange, C.magenta, C.red, C.navy]
 
   return (
     <header style={{ background: C.white, boxShadow: "0 2px 20px rgba(23,27,90,0.10)", position: "sticky", top: 0, zIndex: 50 }}>
@@ -282,7 +282,7 @@ function QuienesSomos() {
               Nuestro trabajo se basa en aprendizajes significativos, atención comprometida y una formación integral que combina desarrollo académico, físico, creativo, social y emocional. A través de experiencias dentro y fuera del aula, buscamos que las niñas y los niños participen activamente, expresen sus ideas, convivan con respeto y construyan herramientas útiles para la vida.
             </p>
             <p style={{ color: "#444", lineHeight: 1.85, fontSize: "0.97rem", margin: 0 }}>
-              Complementamos nuestra propuesta con áreas como pensamiento matemático, lenguaje y comunicación, inglés, computación y educación física, además de actividades como natación, taekwondo, estudiantina, creatividad y ecología. También contamos con el apoyo de la metodología EMMI, que integra materiales, recursos digitales y experiencias dinámicas para enriquecer el aprendizaje.
+              Complementamos nuestra propuesta con áreas como pensamiento matemático, lenguaje y comunicación, inglés, computación y educación física, además de actividades como natación, música y estudiantina, talleres de pintura y creatividad, y ecología. También contamos con el apoyo de la metodología EMMI, que integra materiales, recursos digitales y experiencias dinámicas para enriquecer el aprendizaje.
             </p>
             <p style={{ color: "#444", lineHeight: 1.85, fontSize: "0.97rem", margin: 0 }}>
               Más que una escuela, somos una comunidad educativa comprometida con formar niñas y niños felices, íntegros, reflexivos y capaces de transformar positivamente su entorno.
@@ -404,10 +404,9 @@ function AreasAprendizaje() {
 // ── EXTRACURRICULARES ─────────────────────────────────────────────────────────
 function Extracurriculares() {
   const activities = [
-    { IconEl: Icon.music,    title: "Estudiantina",         desc: "Fomentamos el amor por la música a través de cuerdas, ritmo y expresión artística colectiva.", color: C.magenta, img: "https://images.unsplash.com/photo-1465821185615-20b3c2fbf41b?w=600&h=400&fit=crop&auto=format" },
+    { IconEl: Icon.music,    title: "Música y estudiantina", desc: "Fomentamos el amor por la música a través de cuerdas, ritmo y expresión artística colectiva.", color: C.magenta, img: "https://images.unsplash.com/photo-1465821185615-20b3c2fbf41b?w=600&h=400&fit=crop&auto=format" },
     { IconEl: Icon.droplets, title: "Natación",             desc: "Desarrollamos habilidades acuáticas, confianza y disciplina en un ambiente seguro y estimulante.", color: C.navy, img: "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=600&h=400&fit=crop&auto=format" },
-    { IconEl: Icon.shield,   title: "Taekwondo",            desc: "Cultivamos el respeto, la autodisciplina y la coordinación motriz a través de las artes marciales.", color: C.red, img: "https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&h=400&fit=crop&auto=format" },
-    { IconEl: Icon.brush,    title: "Taller de creatividad",desc: "Exploramos la imaginación a través de la pintura, el modelado, la manualidad y el arte libre.", color: C.orange, img: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&h=400&fit=crop&auto=format" },
+    { IconEl: Icon.brush,    title: "Talleres de pintura y creatividad", desc: "Exploramos la imaginación a través de la pintura, el modelado, las manualidades y el arte libre.", color: C.orange, img: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&h=400&fit=crop&auto=format" },
     { IconEl: Icon.leaf,     title: "Ecología",             desc: "Despertamos la conciencia ambiental y el amor por la naturaleza desde los primeros años.", color: C.green, img: "https://images.unsplash.com/photo-1471107191679-f26174d2d41e?w=600&h=400&fit=crop&auto=format" },
   ]
   return (
@@ -668,7 +667,6 @@ const GALLERY_ITEMS = [
   { id: "07", src: "/images/gallery-07.jpg", alt: "Lectura y lenguaje" },
   { id: "08", src: "/images/gallery-08.jpg", alt: "Ceremonia y convivencia escolar" },
   { id: "09", src: "/images/gallery-09.jpg", alt: "Clase de inglés" },
-  { id: "10", src: "/images/gallery-10.jpg", alt: "Taekwondo — disciplina y valores" },
   { id: "11", src: "/images/gallery-11.jpg", alt: "Actividad de ecología" },
   { id: "12", src: "/images/gallery-12.jpg", alt: "Computación y tecnología" },
   { id: "13", src: "/images/gallery-13.jpg", alt: "Pensamiento matemático" },
@@ -1085,7 +1083,7 @@ function Horarios() {
 function Contacto() {
   const info = [
     { IconEl: Icon.map,      label: "Dirección",        value: "Gral. Francisco Morazán No. 87, Col. Ignacio Zaragoza", color: C.navy,    href: "https://maps.google.com/?q=General+Francisco+Morazán+87+Col+Ignacio+Zaragoza+CDMX" },
-    { IconEl: Icon.phone,    label: "WhatsApp",          value: "+52 55 5433 5816",            color: C.green,   href: "tel:+525554335816" },
+    { IconEl: Icon.phone,    label: "WhatsApp",          value: "Enviar mensaje",               color: C.green,   href: "https://wa.me/525554335816?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20del%20Jard%C3%ADn%20de%20Ni%C3%B1os%20Colibr%C3%AD." },
     { IconEl: Icon.phone,    label: "Teléfono local",    value: "55 71 23 71",                  color: C.purple,  href: "tel:5255712371" },
     { IconEl: Icon.mail,     label: "Correo",            value: "jardincolibri91@hotmail.com",  color: C.orange,  href: "mailto:jardincolibri91@hotmail.com" },
     { IconEl: Icon.facebook, label: "Facebook",          value: "Colibrí Jardín de Niños",      color: C.navy,    href: "https://www.facebook.com/profile.php?id=61550562310995&locale=es_LA" },
@@ -1252,15 +1250,14 @@ const BOT_FLOWS: Record<string, { reply: string; options?: string[] }> = {
   "Costo":                 { reply: "Los costos varían según el nivel y el servicio elegido. Te invitamos a contactarnos directamente al +52 55 5433 5816 para recibir información actualizada y personalizada.", options: ["Inscripciones", "Horarios", "Otra pregunta"] },
   "Metodología EMMI":      { reply: "EMMI es un ecosistema de aprendizaje diseñado para preescolar que combina materiales físicos y recursos digitales. Favorece aprendizajes activos, significativos y adecuados a cada etapa del desarrollo infantil. Integra metodologías internacionales con los contenidos de la Nueva Escuela Mexicana.", options: ["Áreas de aprendizaje", "Extracurriculares", "Nuestros valores", "Otra pregunta"] },
   "Áreas de aprendizaje":  { reply: "Trabajamos pensamiento matemático, lenguaje y comunicación, inglés, yoga y educación física. Todo integrado en una propuesta de formación integral y significativa.", options: ["Extracurriculares", "Metodología EMMI", "Nuestros valores", "Otra pregunta"] },
-  "Extracurriculares":     { reply: "Ofrecemos natación, taekwondo, estudiantina, taller de creatividad y ecología. Estas actividades enriquecen la formación académica y el desarrollo físico, artístico y social de las niñas y los niños.", options: ["Horarios", "Inscripciones", "Nuestros valores", "Otra pregunta"] },
+  "Extracurriculares":     { reply: "Ofrecemos natación, música y estudiantina, talleres de pintura y creatividad, y ecología. Estas actividades enriquecen la formación académica y el desarrollo físico, artístico y social de las niñas y los niños.", options: ["Horarios", "Inscripciones", "Nuestros valores", "Otra pregunta"] },
   "Ubicación":             { reply: "Nos ubicamos en General Francisco Morazán No. 87, Colonia Ignacio Zaragoza. Puedes visitarnos durante el horario de atención o agendando una cita previa.", options: ["Horarios", "Inscripciones", "Otra pregunta"] },
   "Escuela para padres":   { reply: "Contamos con un programa de escuela para padres: talleres, charlas y espacios de orientación para fortalecer el vínculo familia-escuela y acompañar mejor el desarrollo de sus hijas e hijos.", options: ["Nuestros valores", "Inscripciones", "Otra pregunta"] },
   "Nuestros valores":      { reply: "En el Jardín de Niños Colibrí vivimos seis valores esenciales: Respeto, Responsabilidad, Honestidad, Solidaridad, Tolerancia y Amabilidad. Cada uno guía la convivencia diaria y el desarrollo integral de nuestras alumnas y alumnos.", options: ["Metodología EMMI", "Áreas de aprendizaje", "Escuela para padres", "Otra pregunta"] },
-  "Blog educativo":        { reply: "Muy pronto publicaremos artículos sobre aprendizaje activo, consejos para familias, y cómo funciona la metodología EMMI en el aula. ¡Síguenos en redes sociales para enterarte cuando estén disponibles!", options: ["Metodología EMMI", "Nuestros valores", "Otra pregunta"] },
   "Otra pregunta":         { reply: "Con gusto te atendemos directamente. Llámanos al +52 55 5433 5816 o escríbenos a jardincolibri91@hotmail.com. También puedes encontrarnos en Facebook e Instagram como Colibrí Jardín de Niños.", options: ["Horarios", "Inscripciones", "Ubicación"] },
 }
 
-const INITIAL_OPTIONS = ["Horarios", "Inscripciones", "Metodología EMMI", "Nuestros valores", "Extracurriculares", "Ubicación", "Escuela para padres", "Blog educativo"]
+const INITIAL_OPTIONS = ["Horarios", "Inscripciones", "Metodología EMMI", "Nuestros valores", "Extracurriculares", "Ubicación", "Escuela para padres"]
 const WELCOME = "Hola, soy Colibrí, tu asistente virtual del Jardín de Niños Colibrí. Estoy aquí para ayudarte a conocer nuestra propuesta educativa. ¿En qué puedo orientarte?"
 
 function Chatbot() {
@@ -1446,7 +1443,6 @@ export default function App() {
       <Metodologia />
       <AreasAprendizaje />
       <Extracurriculares />
-      <Blog />
       <Galeria />
       <EscuelaPadres />
       <VideoInstitucional />
