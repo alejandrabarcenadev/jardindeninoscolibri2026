@@ -245,9 +245,11 @@ function Hero() {
         </div>
 
         <div className="flex flex-col items-center gap-6 lg:-ml-8">
-          <img src={logoHero} alt="Logo Jardín de Niños Colibrí"
-            style={{ width: "clamp(300px,46vw,600px)", maxWidth: "92vw", objectFit: "contain" }}
-          />
+          <div style={{ width: "clamp(300px,46vw,600px)", maxWidth: "92vw", aspectRatio: "1 / 0.86", overflow: "hidden" }}>
+            <img src={logoHero} alt="Logo Jardín de Niños Colibrí"
+              style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }}
+            />
+          </div>
         </div>
       </div>
     </section>
