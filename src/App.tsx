@@ -245,7 +245,7 @@ function Hero() {
         </div>
 
         <div className="flex flex-col items-center gap-6 lg:-ml-8">
-          <div style={{ width: "clamp(300px,46vw,600px)", maxWidth: "92vw", aspectRatio: "1 / 0.92", overflow: "hidden" }}>
+          <div style={{ width: "clamp(300px,46vw,600px)", maxWidth: "92vw", marginBottom: "clamp(-72px,-10vw,-36px)" }}>
             <img src={logoHero} alt="Logo Jardín de Niños Colibrí"
               style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }}
             />
