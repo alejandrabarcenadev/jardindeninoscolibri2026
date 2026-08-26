@@ -687,6 +687,18 @@ const GALLERY_ITEMS = [
   { id: "14", src: "/images/gallery-14.jpg", alt: "Escuela para padres" },
   { id: "15", src: "/images/gallery-15.jpg", alt: "Instalaciones del jardín" },
   { id: "16", src: "/images/gallery-16.jpg", alt: "Graduación y festejo escolar" },
+  { id: "17", src: "/images/instalaciones/colibri-instalaciones-01.jpeg", alt: "Fachada del Jardín de Niños Colibrí" },
+  { id: "18", src: "/images/instalaciones/colibri-instalaciones-02.jpeg", alt: "Patio principal con murales y arcoíris" },
+  { id: "19", src: "/images/instalaciones/colibri-instalaciones-03.jpeg", alt: "Salón de clases del jardín" },
+  { id: "20", src: "/images/instalaciones/colibri-instalaciones-04.jpeg", alt: "Área de juegos con resbaladillas" },
+  { id: "21", src: "/images/instalaciones/colibri-instalaciones-05.jpeg", alt: "Biblioteca infantil" },
+  { id: "22", src: "/images/instalaciones/colibri-instalaciones-06a.jpeg", alt: "Mural y espacio de juego motriz" },
+  { id: "23", src: "/images/instalaciones/colibri-instalaciones-06b.jpeg", alt: "Área de estimulación y alberca de pelotas" },
+  { id: "24", src: "/images/instalaciones/colibri-instalaciones-07.jpeg", alt: "Sala de estimulación infantil" },
+  { id: "25", src: "/images/instalaciones/colibri-instalaciones-08.jpeg", alt: "Área de lavado adaptada para niñas y niños" },
+  { id: "26", src: "/images/instalaciones/colibri-instalaciones-09.jpeg", alt: "Sanitario infantil adaptado" },
+  { id: "27", src: "/images/instalaciones/colibri-instalaciones-10.jpeg", alt: "Biblioteca y rincón de lectura" },
+  { id: "28", src: "/images/instalaciones/colibri-instalaciones-11.jpeg", alt: "Patio interior del jardín" },
 ]
 
 function GalleryPlaceholder({ alt }: { alt: string }) {
@@ -911,32 +923,24 @@ function EscuelaPadres() {
 
 // ── VIDEO INSTITUCIONAL ───────────────────────────────────────────────────────
 function VideoInstitucional() {
-  const [playing, setPlaying] = useState(false)
   return (
     <section style={{ background: C.navy, position: "relative" }} className="py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <Chip color={C.yellow}>Video institucional</Chip>
         <h2 style={{ fontFamily: "'Fredoka One',cursive", color: C.white, fontSize: "clamp(1.8rem,4vw,2.6rem)", marginTop: 12, marginBottom: 8 }}>Conoce nuestro jardín</h2>
         <p style={{ color: "rgba(255,255,255,0.72)", marginBottom: 32, fontSize: "0.96rem" }}>
-          Muy pronto podrás ver aquí un video breve sobre nuestras instalaciones, actividades y propuesta educativa.
+          Recorre nuestras instalaciones y conoce algunas de las experiencias que forman parte de nuestra comunidad educativa.
         </p>
-        <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.4)", cursor: "pointer", background: "#0d1040" }} onClick={() => setPlaying(true)}>
-          <img src="https://images.unsplash.com/photo-1571210862729-78a52d3779a2?w=1200&h=680&fit=crop&auto=format" alt="Placeholder — video institucional Jardín de Niños Colibrí" style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover", opacity: playing ? 0.3 : 0.6, transition: "opacity 0.3s" }} />
-          <div style={{ position: "absolute", inset: 0, background: `linear-gradient(135deg,${C.navy}cc,${C.purple}88)` }} />
-          {!playing ? (
-            <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16 }}>
-              <div style={{ width: 72, height: 72, borderRadius: "50%", background: C.yellow, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: `0 8px 32px ${C.yellow}88`, transition: "transform 0.2s" }} className="hover:scale-110">
-                <Icon.play size={28} color={C.navy} />
-              </div>
-              <span style={{ color: C.white, fontFamily: "'Fredoka One',cursive", fontSize: "1.1rem" }}>Reproducir video</span>
-            </div>
-          ) : (
-            <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ color: C.white, fontFamily: "'Fredoka One',cursive", fontSize: "1.2rem" }}>Video próximamente</span>
-            </div>
-          )}
-          <div style={{ position: "absolute", bottom: 16, right: 16, background: "rgba(0,0,0,0.6)", color: C.white, borderRadius: 8, padding: "4px 10px", fontSize: "0.78rem", fontWeight: 700 }}>Próximamente</div>
-        </div>
+        <video
+          controls
+          playsInline
+          preload="metadata"
+          poster={quienesSomos}
+          style={{ width: "100%", aspectRatio: "16 / 9", objectFit: "cover", display: "block", borderRadius: 24, boxShadow: "0 20px 60px rgba(0,0,0,0.4)", background: "#0d1040" }}
+        >
+          <source src="/media/video-institucional.mp4" type="video/mp4" />
+          Tu navegador no puede reproducir este video.
+        </video>
       </div>
     </section>
   )
