@@ -665,10 +665,10 @@ function Blog() {
 // ── GALERÍA ───────────────────────────────────────────────────────────────────
 // ✏️  EDITAR AQUÍ: cambia src y alt de cada entrada para actualizar las fotos
 const GALLERY_ITEMS = [
-  { id: "01", src: "/images/gallery-01.jpg", alt: "Actividades en el salón de clases" },
-  { id: "02", src: "/images/gallery-02.jpg", alt: "Niños en recreo" },
-  { id: "03", src: "/images/gallery-03.jpg", alt: "Clase de educación física" },
-  { id: "04", src: "/images/gallery-04.jpg", alt: "Taller de creatividad" },
+  { id: "01", src: acompanamientoEstructurado, alt: "Acompañamiento estructurado en el salón de clases" },
+  { id: "02", src: aprenderJugandoExplorando, alt: "Niñas y niños aprendiendo, jugando y explorando" },
+  { id: "03", src: aprendizajeActivo, alt: "Actividad de aprendizaje activo" },
+  { id: "04", src: metodologiaEmmi, alt: "Metodología EMMI en el aula" },
   { id: "05", src: "/images/gallery-05.jpg", alt: "Actividad de natación" },
   { id: "06", src: "/images/gallery-06.jpg", alt: "Clase de música — estudiantina" },
   { id: "07", src: "/images/gallery-07.jpg", alt: "Lectura y lenguaje" },
@@ -866,10 +866,10 @@ function Galeria() {
 // ── ESCUELA PARA PADRES ───────────────────────────────────────────────────────
 function EscuelaPadres() {
   const items = [
-    { IconEl: Icon.users, title: "Talleres para familias", desc: "Sesiones prácticas sobre comunicación, límites, desarrollo emocional y acompañamiento en el aprendizaje.", img: acompanamientoEstructurado, objectPosition: "center 38%" },
-    { IconEl: Icon.chat, title: "Charlas de orientación", desc: "Espacios de reflexión con especialistas en educación infantil y crianza positiva.", img: aprenderJugandoExplorando, objectPosition: "center 48%" },
-    { IconEl: Icon.heart, title: "Comunidad de apoyo", desc: "Un espacio de confianza donde madres y padres comparten experiencias y se apoyan mutuamente.", img: aprendizajeActivo, objectPosition: "center 42%" },
-    { IconEl: Icon.link, title: "Vínculo escuela-familia", desc: "Fortalecemos la comunicación continua para que el proceso educativo sea una experiencia compartida.", img: metodologiaEmmi, objectPosition: "center 42%" },
+    { IconEl: Icon.users, title: "Talleres para familias", desc: "Sesiones prácticas sobre comunicación, límites, desarrollo emocional y acompañamiento en el aprendizaje." },
+    { IconEl: Icon.chat, title: "Charlas de orientación", desc: "Espacios de reflexión con especialistas en educación infantil y crianza positiva." },
+    { IconEl: Icon.heart, title: "Comunidad de apoyo", desc: "Un espacio de confianza donde madres y padres comparten experiencias y se apoyan mutuamente." },
+    { IconEl: Icon.link, title: "Vínculo escuela-familia", desc: "Fortalecemos la comunicación continua para que el proceso educativo sea una experiencia compartida." },
   ]
   return (
     <section style={{ background: "linear-gradient(135deg,#fff8f0 0%,#fff3fa 100%)", position: "relative" }} className="py-20">
@@ -886,7 +886,6 @@ function EscuelaPadres() {
           <div className="grid sm:grid-cols-2 gap-5">
             {items.map(it => (
               <div key={it.title} style={{ background: C.white, borderRadius: 20, overflow: "hidden", boxShadow: "0 4px 20px rgba(183,23,106,0.08)", borderLeft: `4px solid ${C.magenta}`, display: "flex", flexDirection: "column" }}>
-                <ImgPlaceholder src={it.img} alt={it.title} height={150} radius={0} objectPosition={it.objectPosition} />
                 <div style={{ padding: "1.25rem 1.25rem" }}>
                   <div style={{ marginBottom: 8, width: 36, height: 36, borderRadius: 10, background: C.magenta + "18", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <it.IconEl size={18} color={C.magenta} />
