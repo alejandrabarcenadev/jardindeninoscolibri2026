@@ -178,8 +178,8 @@ function Header() {
   return (
     <header style={{ background: C.white, boxShadow: "0 2px 20px rgba(23,27,90,0.10)", position: "sticky", top: 0, zIndex: 50 }}>
       <div style={{ height: 4, background: `linear-gradient(90deg,${C.red} 0%,${C.orange} 18%,${C.yellow} 34%,${C.green} 50%,${C.navy} 67%,${C.purple} 82%,${C.magenta} 100%)` }} />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
-        <img src={logoHeader} alt="Jardín de Niños Colibrí" style={{ height: 56, width: "auto", objectFit: "contain" }} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-24">
+        <img src={logoHeader} alt="Jardín de Niños Colibrí" style={{ height: 72, maxWidth: "72vw", width: "auto", objectFit: "contain" }} />
         <nav className="hidden lg:flex items-center gap-0.5">
           {links.map((l, i) => (
             <a key={l} href={`#${l.toLowerCase()}`}
@@ -246,7 +246,7 @@ function Hero() {
 
         <div className="flex flex-col items-center gap-6 lg:-ml-8">
           <img src={logoHero} alt="Logo Jardín de Niños Colibrí"
-            style={{ width: "clamp(280px,42vw,520px)", objectFit: "contain" }}
+            style={{ width: "clamp(300px,46vw,600px)", maxWidth: "92vw", objectFit: "contain" }}
           />
         </div>
       </div>
@@ -1091,7 +1091,7 @@ function Contacto() {
 
   const socials = [
     { IconEl: Icon.facebook,  label: "Facebook",  color: C.navy,    href: "https://www.facebook.com/profile.php?id=61550562310995&locale=es_LA" },
-    { IconEl: Icon.instagram, label: "Instagram", color: C.magenta, href: "https://www.instagram.com/jardindeninoscolibri" },
+    { IconEl: Icon.instagram, label: "Instagram", color: C.magenta, href: "https://www.instagram.com/jardindeninoscolibri?igsi=MXFkem56eGYydHh5NA==" },
     { IconEl: Icon.tiktok,    label: "TikTok",    color: C.carbon,  href: "#" },
   ]
 
@@ -1202,7 +1202,7 @@ function Footer() {
             <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
               {[
                 { IconEl: Icon.facebook,  color: C.navy,    href: "https://www.facebook.com/profile.php?id=61550562310995&locale=es_LA", label: "Facebook" },
-                { IconEl: Icon.instagram, color: C.magenta, href: "https://www.instagram.com/jardindeninoscolibri", label: "Instagram" },
+                { IconEl: Icon.instagram, color: C.magenta, href: "https://www.instagram.com/jardindeninoscolibri?igsi=MXFkem56eGYydHh5NA==", label: "Instagram" },
                 { IconEl: Icon.tiktok,    color: C.carbon,  href: "#", label: "TikTok" },
               ].map(s => (
                 <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" title={s.label}
