@@ -6,6 +6,7 @@ import quienesSomos from "@/imports/quienes-somos.jpeg"
 import acompanamientoEstructurado from "@/imports/acompanamiento-estructurado.jpeg"
 import aprenderJugandoExplorando from "@/imports/aprender-jugando-explorando.jpeg"
 import aprendizajeActivo from "@/imports/aprendizaje-activo.jpeg"
+import ballet from "@/imports/ballet.jpeg"
 import metodologiaEmmi from "@/imports/metodologia-emmi.jpeg"
 import platicaFamiliar from "@/imports/platica-familiar.jpeg"
 import ecologia from "@/imports/ecologia.jpeg"
@@ -13,6 +14,7 @@ import materialesExplorar from "@/imports/materiales-explorar.jpeg"
 import musicaEstudiantina from "@/imports/musica-estudiantina.jpeg"
 import natacion from "@/imports/natacion.jpeg"
 import pinturaCreatividad from "@/imports/pintura-creatividad.jpeg"
+import soccer from "@/imports/soccer.jpeg"
 import tecnologiaProposito from "@/imports/tecnologia-proposito.jpg"
 
 const C = {
@@ -295,7 +297,7 @@ function QuienesSomos() {
               Nuestro trabajo se basa en aprendizajes significativos, atención comprometida y una formación integral que combina desarrollo académico, físico, creativo, social y emocional. A través de experiencias dentro y fuera del aula, buscamos que las niñas y los niños participen activamente, expresen sus ideas, convivan con respeto y construyan herramientas útiles para la vida.
             </p>
             <p style={{ color: "#444", lineHeight: 1.85, fontSize: "0.97rem", margin: 0 }}>
-              Complementamos nuestra propuesta con áreas como pensamiento matemático, lenguaje y comunicación, inglés, computación y educación física, además de actividades como natación, música y estudiantina, talleres de pintura y creatividad, y ecología. También contamos con el apoyo de la metodología EMMI, que integra materiales, recursos digitales y experiencias dinámicas para enriquecer el aprendizaje.
+              Complementamos nuestra propuesta con áreas como pensamiento matemático, lenguaje y comunicación, inglés, computación y educación física, además de actividades como natación, música y estudiantina, pintura y creatividad, ecología, ballet y soccer. También contamos con el apoyo de la metodología EMMI, que integra materiales, recursos digitales y experiencias dinámicas para enriquecer el aprendizaje.
             </p>
             <p style={{ color: "#444", lineHeight: 1.85, fontSize: "0.97rem", margin: 0 }}>
               Más que una escuela, somos una comunidad educativa comprometida con formar niñas y niños felices, íntegros, reflexivos y capaces de transformar positivamente su entorno.
@@ -419,8 +421,10 @@ function Extracurriculares() {
   const activities = [
     { IconEl: Icon.music, title: "Música y estudiantina", desc: "Fomentamos el amor por la música a través de cuerdas, ritmo y expresión artística colectiva.", color: C.magenta, img: musicaEstudiantina },
     { IconEl: Icon.droplets, title: "Natación", desc: "Desarrollamos habilidades acuáticas, confianza y disciplina en un ambiente seguro y estimulante.", color: C.navy, img: natacion },
-    { IconEl: Icon.brush, title: "Talleres de pintura y creatividad", desc: "Exploramos la imaginación a través de la pintura, el modelado, las manualidades y el arte libre.", color: C.orange, img: pinturaCreatividad },
+    { IconEl: Icon.brush, title: "Pintura y creatividad", desc: "Exploramos la imaginación a través de la pintura, el modelado, las manualidades y el arte libre.", color: C.orange, img: pinturaCreatividad },
     { IconEl: Icon.leaf, title: "Ecología", desc: "Despertamos la conciencia ambiental y el amor por la naturaleza desde los primeros años.", color: C.green, img: ecologia },
+    { IconEl: Icon.star, title: "Ballet", desc: "Fortalecemos la coordinación, el equilibrio, la disciplina y la expresión corporal a través de la danza.", color: C.purple, img: ballet },
+    { IconEl: Icon.activity, title: "Soccer", desc: "Desarrollamos la coordinación, la condición física, el trabajo en equipo y la confianza mediante el juego y el deporte.", color: C.red, img: soccer, imageScale: 1.22 },
   ]
   return (
     <section id="extracurriculares" style={{ background: C.white, position: "relative" }} className="py-20">
@@ -430,7 +434,7 @@ function Extracurriculares() {
           {activities.map(act => (
             <div key={act.title} style={{ borderRadius: 22, overflow: "hidden", boxShadow: "0 4px 24px rgba(23,27,90,0.09)", transition: "transform 0.2s,box-shadow 0.2s", background: C.white }} className="hover:-translate-y-1 hover:shadow-xl">
               <div style={{ height: 180, overflow: "hidden", position: "relative" }}>
-                <img src={act.img} alt={act.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <img src={act.img} alt={act.title} style={{ width: "100%", height: "100%", objectFit: "cover", transform: act.imageScale ? `scale(${act.imageScale})` : undefined }} />
                 <div style={{ position: "absolute", bottom: 12, left: 12, background: act.color, color: C.white, borderRadius: 99, padding: "5px 14px", fontFamily: "'Fredoka One',cursive", fontSize: "0.95rem", display: "flex", alignItems: "center", gap: 6 }}>
                   <act.IconEl size={14} color={C.white} />{act.title}
                 </div>
@@ -1283,7 +1287,7 @@ const BOT_FLOWS: Record<string, { reply: string; options?: string[] }> = {
   "Costo":                 { reply: "Los costos varían según el nivel y el servicio elegido. Te invitamos a contactarnos directamente al +52 55 5433 5816 para recibir información actualizada y personalizada.", options: ["Inscripciones", "Horarios", "Otra pregunta"] },
   "Metodología EMMI":      { reply: "EMMI es un ecosistema de aprendizaje diseñado para preescolar que combina materiales físicos y recursos digitales. Favorece aprendizajes activos, significativos y adecuados a cada etapa del desarrollo infantil. Integra metodologías internacionales con los contenidos de la Nueva Escuela Mexicana.", options: ["Áreas de aprendizaje", "Extracurriculares", "Nuestros valores", "Otra pregunta"] },
   "Áreas de aprendizaje":  { reply: "Trabajamos pensamiento matemático, lenguaje y comunicación, inglés, yoga y educación física. Todo integrado en una propuesta de formación integral y significativa.", options: ["Extracurriculares", "Metodología EMMI", "Nuestros valores", "Otra pregunta"] },
-  "Extracurriculares":     { reply: "Ofrecemos natación, música y estudiantina, talleres de pintura y creatividad, y ecología. Estas actividades enriquecen la formación académica y el desarrollo físico, artístico y social de las niñas y los niños.", options: ["Horarios", "Inscripciones", "Nuestros valores", "Otra pregunta"] },
+  "Extracurriculares":     { reply: "Ofrecemos natación, música y estudiantina, pintura y creatividad, ecología, ballet y soccer. Estas actividades enriquecen la formación académica y el desarrollo físico, artístico y social de las niñas y los niños.", options: ["Horarios", "Inscripciones", "Nuestros valores", "Otra pregunta"] },
   "Ubicación":             { reply: "Nos ubicamos en General Francisco Morazán No. 87, Colonia Ignacio Zaragoza. Puedes visitarnos durante el horario de atención o agendando una cita previa.", options: ["Horarios", "Inscripciones", "Otra pregunta"] },
   "Escuela para padres":   { reply: "Contamos con un programa de escuela para padres: talleres, charlas y espacios de orientación para fortalecer el vínculo familia-escuela y acompañar mejor el desarrollo de sus hijas e hijos.", options: ["Nuestros valores", "Inscripciones", "Otra pregunta"] },
   "Nuestros valores":      { reply: "En el Jardín de Niños Colibrí vivimos seis valores esenciales: Respeto, Responsabilidad, Honestidad, Solidaridad, Tolerancia y Amabilidad. Cada uno guía la convivencia diaria y el desarrollo integral de nuestras alumnas y alumnos.", options: ["Metodología EMMI", "Áreas de aprendizaje", "Escuela para padres", "Otra pregunta"] },
