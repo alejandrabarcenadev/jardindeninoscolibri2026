@@ -1,6 +1,6 @@
 import { useState } from "react"
 import logoHeader from "@/imports/logo_horizonta._jadin.deninos.colibri.png"
-import logoHero from "@/imports/logo_colibri_limpio.png"
+import logoHero from "@/imports/logo_colibri_limpio.webp"
 import imgPlaceholder from "@/imports/placeholder-1.png"
 import quienesSomos from "@/imports/quienes-somos.jpeg"
 import acompanamientoEstructurado from "@/imports/acompanamiento-estructurado.jpeg"
