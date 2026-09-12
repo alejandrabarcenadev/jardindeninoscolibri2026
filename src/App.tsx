@@ -1,6 +1,6 @@
 import { useState } from "react"
 import logoHeader from "@/imports/logo_horizonta._jadin.deninos.colibri.png"
-import logoHero from "@/imports/logo_oficial.jpg"
+import logoHero from "@/imports/logo_colibri_limpio.png"
 import imgPlaceholder from "@/imports/placeholder-1.png"
 import quienesSomos from "@/imports/quienes-somos.jpeg"
 import acompanamientoEstructurado from "@/imports/acompanamiento-estructurado.jpeg"
@@ -111,9 +111,6 @@ const Icon = {
   ),
   instagram: (p: { size?: number; color?: string }) => (
     <svg width={p.size ?? 22} height={p.size ?? 22} viewBox="0 0 24 24" fill="none" stroke={p.color ?? "currentColor"} strokeWidth="2" strokeLinecap="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill={p.color ?? "currentColor"} stroke="none"/></svg>
-  ),
-  tiktok:    (p: { size?: number; color?: string }) => (
-    <svg width={p.size ?? 22} height={p.size ?? 22} viewBox="0 0 24 24" fill={p.color ?? "currentColor"}><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
   ),
   check:     (p: { size?: number; color?: string }) => (
     <svg width={p.size ?? 12} height={p.size ?? 12} viewBox="0 0 24 24" fill="none" stroke={p.color ?? "currentColor"} strokeWidth="3" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1129,7 +1126,6 @@ function Contacto() {
   const socials = [
     { IconEl: Icon.facebook,  label: "Facebook",  color: C.navy,    href: "https://www.facebook.com/profile.php?id=61550562310995&locale=es_LA" },
     { IconEl: Icon.instagram, label: "Instagram", color: C.magenta, href: "https://www.instagram.com/jardindeninoscolibri?igsi=MXFkem56eGYydHh5NA==" },
-    { IconEl: Icon.tiktok,    label: "TikTok",    color: C.carbon,  href: "#" },
   ]
 
   return (
@@ -1240,7 +1236,6 @@ function Footer() {
               {[
                 { IconEl: Icon.facebook,  color: C.navy,    href: "https://www.facebook.com/profile.php?id=61550562310995&locale=es_LA", label: "Facebook" },
                 { IconEl: Icon.instagram, color: C.magenta, href: "https://www.instagram.com/jardindeninoscolibri?igsi=MXFkem56eGYydHh5NA==", label: "Instagram" },
-                { IconEl: Icon.tiktok,    color: C.carbon,  href: "#", label: "TikTok" },
               ].map(s => (
                 <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" title={s.label}
                   style={{ width: 34, height: 34, borderRadius: 10, background: s.color + "12", border: `1.5px solid ${s.color}25`, display: "flex", alignItems: "center", justifyContent: "center", transition: "background 0.18s", textDecoration: "none" }}
